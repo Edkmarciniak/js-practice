@@ -1,1 +1,11 @@
-export const add2Nums = (num1, num2) => num1 + num2;
+import users from "./users.js";
+
+function getNameUserCity(person) {
+  return `
+    <p>${person.name} ${person.username} is ${person.email} </p>
+  `;
+}
+
+const mapNamesUserCity = users.map(getNameUserCity);
+
+console.log(mapNamesUserCity);
